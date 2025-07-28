@@ -3,7 +3,7 @@ FROM php:8.2-fpm
 # Set working directory
 WORKDIR /var/www
 
-# Install system dependencies
+# Install system dependencies (without node)
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpng-dev \
@@ -15,9 +15,11 @@ RUN apt-get update && apt-get install -y \
     unzip \
     curl \
     git \
-    npm \
-    nodejs \
     vim
+
+# Install Node.js 20 (separately)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
@@ -28,28 +30,28 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy project files
 COPY . .
 
-# Ensure Node is installed correctly
+# Verify Node & NPM versions
 RUN node -v && npm -v
 
 # Install Laravel & Node dependencies
 RUN composer install --no-dev --optimize-autoloader
 RUN npm install
 
-# Build Frontend (Vite)
+# Build frontend (Vite)
 RUN npm run build
 
-# Laravel optimization
+# Laravel optimizations
 RUN php artisan config:cache \
     && php artisan route:cache \
     && php artisan view:cache \
     && php artisan storage:link
 
-# Fix Permissions (very important for storage/logs)
+# Permissions
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 775 storage bootstrap/cache
 
-# Expose the port
+# Expose port
 EXPOSE 8000
 
-# Serve Laravel app
+# Run Laravel dev server
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
