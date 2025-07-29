@@ -1,21 +1,6 @@
-# Stage 1: Build assets using Node 20
-FROM node:20 AS build
+# Stage 1 Removed: No Node, No build, No Tailwind
 
-WORKDIR /app
-
-# Copy package files for dependency installation
-COPY package.json package-lock.json ./
-RUN npm install
-
-# Copy Vite config and only frontend resources you need
-COPY vite.config.js . 
-COPY resources ./resources
-COPY public ./public
-
-# Build Vite assets (will NOT include Tailwind or FontAwesome now)
-RUN npm run build
-
-# Stage 2: Laravel + Apache with PHP
+# Stage 1: Laravel + Apache with PHP
 FROM php:8.2-apache
 
 # Install Composer
@@ -36,13 +21,10 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy Laravel app
+# Copy Laravel application files
 COPY . .
 
-# Copy only built assets (no Tailwind now)
-COPY --from=build /app/public/build ./public/build
-
-# Run composer install
+# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
 # Set correct permissions
