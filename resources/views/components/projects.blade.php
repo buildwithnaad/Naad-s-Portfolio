@@ -6,42 +6,42 @@
         <!-- Repeat manually since no Blade/loop -->
         <div class="portfolio-image-container p-3">
             <div class="group relative overflow-hidden rounded-[8px] my-3 shadow-md transition-all duration-300 hover:shadow-xl">
-                <img src="assets/images/p1.png" alt="Project Image 1"
+                <img src="https://naadali.onrender.com/assets/images/p1.png" alt="Project Image 1"
                     class="w-full h-[250px] object-cover rounded-[8px] transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                     onclick="openModal(0)" />
             </div>
         </div>
         <div class="portfolio-image-container p-3">
             <div class="group relative overflow-hidden rounded-[8px] my-3 shadow-md transition-all duration-300 hover:shadow-xl">
-                <img src="assets/images/p2.png" alt="Project Image 2"
+                <img src="https://naadali.onrender.com/assets/images/p2.png" alt="Project Image 2"
                     class="w-full h-[250px] object-cover rounded-[8px] transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                     onclick="openModal(1)" />
             </div>
         </div>
         <div class="portfolio-image-container p-3">
             <div class="group relative overflow-hidden rounded-[8px] my-3 shadow-md transition-all duration-300 hover:shadow-xl">
-                <img src="assets/images/p3.png" alt="Project Image 3"
+                <img src="https://naadali.onrender.com/assets/images/p3.png" alt="Project Image 3"
                     class="w-full h-[250px] object-cover rounded-[8px] transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                     onclick="openModal(2)" />
             </div>
         </div>
         <div class="portfolio-image-container p-3">
             <div class="group relative overflow-hidden rounded-[8px] my-3 shadow-md transition-all duration-300 hover:shadow-xl">
-                <img src="assets/images/p4.png" alt="Project Image 4"
+                <img src="https://naadali.onrender.com/assets/images/p4.png" alt="Project Image 4"
                     class="w-full h-[250px] object-cover rounded-[8px] transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                     onclick="openModal(3)" />
             </div>
         </div>
         <div class="portfolio-image-container p-3">
             <div class="group relative overflow-hidden rounded-[8px] my-3 shadow-md transition-all duration-300 hover:shadow-xl">
-                <img src="assets/images/p5.png" alt="Project Image 5"
+                <img src="https://naadali.onrender.com/assets/images/p5.png" alt="Project Image 5"
                     class="w-full h-[250px] object-cover rounded-[8px] transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                     onclick="openModal(4)" />
             </div>
         </div>
         <div class="portfolio-image-container p-3">
             <div class="group relative overflow-hidden rounded-[8px] my-3 shadow-md transition-all duration-300 hover:shadow-xl">
-                <img src="assets/images/project1.png" alt="Project Image 6"
+                <img src="https://naadali.onrender.com/assets/images/project1.png" alt="Project Image 6"
                     class="w-full h-[250px] object-cover rounded-[8px] transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                     onclick="openModal(5)" />
             </div>
@@ -64,12 +64,12 @@
 
 <script>
     const imagePaths = [
-        "assets/images/p1.png",
-        "assets/images/p2.png",
-        "assets/images/p3.png",
-        "assets/images/p4.png",
-        "assets/images/p5.png",
-        "assets/images/project1.png"
+        "https://naadali.onrender.com/assets/images/p1.png",
+        "https://naadali.onrender.com/assets/images/p2.png",
+        "https://naadali.onrender.com/assets/images/p3.png",
+        "https://naadali.onrender.com/assets/images/p4.png",
+        "https://naadali.onrender.com/assets/images/p5.png",
+        "https://naadali.onrender.com/assets/images/project1.png"
     ];
 
     let currentIndex = 0;

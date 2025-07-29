@@ -25,7 +25,7 @@
 
     <main class="container mx-auto main-section">
         <img style="z-index: -1" class="absolute top-[-120px] left-[-120px] bg-blue"
-            src="{{ asset('assets/images/Ellipse 1.png') }}" alt="" id="bg-image">
+            src="https://naadali.onrender.com/assets/images/Ellipse 1.png" alt="" id="bg-image">
         @yield('content')
 
     </main>
