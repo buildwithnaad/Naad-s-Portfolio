@@ -7,14 +7,13 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy Vite config and Laravel frontend resources
+# Copy Vite config and only frontend resources you need
 COPY vite.config.js . 
 COPY resources ./resources
 COPY public ./public
 
-# Build Vite assets
+# Build Vite assets (will NOT include Tailwind or FontAwesome now)
 RUN npm run build
-
 
 # Stage 2: Laravel + Apache with PHP
 FROM php:8.2-apache
@@ -40,7 +39,7 @@ WORKDIR /var/www/html
 # Copy Laravel app
 COPY . .
 
-# Copy Vite build files from stage 1
+# Copy only built assets (no Tailwind now)
 COPY --from=build /app/public/build ./public/build
 
 # Run composer install
