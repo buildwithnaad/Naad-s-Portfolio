@@ -1,43 +1,38 @@
-# =============================
-# ✅ UPDATED Dockerfile (Node 20 + PHP + Apache)
-# =============================
-
-FROM node:20-slim as node
+# Stage 1: Build assets using Node 20
+FROM node:20 AS build
 
 WORKDIR /app
 
-# Copy package files and install Vite deps
-COPY package*.json ./
+# Copy only the files needed for vite build
+COPY package.json package-lock.json vite.config.js ./
+COPY resources ./resources
+COPY public ./public
+
 RUN npm install && npm run build
 
-# =============================
-# ✅ Apache + PHP image with Composer
-# =============================
+# Stage 2: Laravel + Apache with PHP
 FROM php:8.2-apache
 
 # Install required PHP extensions
-RUN apt-get update \
-    && apt-get install -y libzip-dev unzip git curl \
+RUN apt-get update && apt-get install -y \
+    git unzip curl libpng-dev libonig-dev libxml2-dev zip libzip-dev \
     && docker-php-ext-install pdo pdo_mysql zip
 
-# Enable Apache rewrite module
+# Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy Laravel app files
-COPY . /var/www/html
+# Copy Laravel app (excluding node_modules and vendor)
+COPY . .
 
-# Copy Vite build from node container
-COPY --from=node /app/public/build /var/www/html/public/build
+# Copy built vite assets
+COPY --from=build /app/public/build ./public/build
 
-# Set permissions
+# Set proper permissions
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+    && chmod -R 755 /var/www/html/storage
 
-# Expose default Apache port
+# Expose port 80
 EXPOSE 80
-
-# Start Apache
-CMD ["apache2-foreground"]
