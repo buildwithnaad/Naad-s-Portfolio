@@ -11,7 +11,7 @@ services:
       - key: APP_KEY
         value: base64:H2bkf5Kcl2kWM6SFVaTtebbl7c4PPG3xLWW22TIzToI=
       - key: APP_DEBUG
-        value: false
+        value: true
       - key: APP_URL
         value: https://naadali.onrender.com
       - key: DB_CONNECTION
