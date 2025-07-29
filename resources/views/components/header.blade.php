@@ -7,7 +7,7 @@
         <ul class="nav-items mx-auto flex flex-row justify-between items-center gap-5 ">
             <li>
                 <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                    class="nav-link relative inline-block font-medium py-2 px-2   
                             after:content-[''] after:absolute after:bottom-0 after:left-0 
                             after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                             after:origin-left after:transition-transform after:duration-300 
@@ -17,7 +17,7 @@
             </li>
             <li>
                 <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                    class="nav-link relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -27,7 +27,7 @@
             </li>
             <li>
                 <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                    class="nav-link relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -37,7 +37,7 @@
             </li>
             <li>
                 <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                    class="nav-link relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -47,7 +47,7 @@
             </li>
             <li>
                 <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                    class="nav-link relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -57,7 +57,7 @@
             </li>
             <li>
                 <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                    class="nav-link relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -129,12 +129,12 @@
         <div id="mobileMenu"
             class="absolute  top-0 left-0 w-full  p-6 rounded-b-xl shadow-xl transform scale-y-0 opacity-0 origin-top transition-all duration-300 ease-in-out z-1">
             <ul class="flex flex-col justify-center items-center gap-5">
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Home</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">About</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Services</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Experties</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Mission</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Contact</a></li>
+                <li><a href="#" class="nav-link   hover:text-[#FF4141] transition">Home</a></li>
+                <li><a href="#" class="nav-link   hover:text-[#FF4141] transition">About</a></li>
+                <li><a href="#" class="nav-link   hover:text-[#FF4141] transition">Services</a></li>
+                <li><a href="#" class="nav-link   hover:text-[#FF4141] transition">Experties</a></li>
+                <li><a href="#" class="nav-link   hover:text-[#FF4141] transition">Mission</a></li>
+                <li><a href="#" class="nav-link   hover:text-[#FF4141] transition">Contact</a></li>
             </ul>
             <div class="mt-6 flex justify-center">
                 \
