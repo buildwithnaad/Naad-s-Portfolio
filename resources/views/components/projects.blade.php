@@ -78,7 +78,7 @@
     </button>
 
     <!-- Image Container -->
-    <div class="w-full max-w-6xl max-h-[85vh] mt-20 mb-10 overflow-hidden rounded-2xl border-2 border-white/20 shadow-2xl transition-transform duration-500 transform hover:scale-[1.02]">
+    <div class="w-full max-w-6xl max-h-[85vh] mt-20 mb-10 overflow-y-auto rounded-2xl border-2 border-white/20 shadow-2xl transition-transform duration-500 transform hover:scale-[1.02]">
         <img id="modalImage"
             src=""
             alt="Preview"
@@ -122,6 +122,10 @@
 
     function prevImage() {
         currentIndex = (currentIndex - 1 + imagePaths.length) % imagePaths.length;
+        document.getElementById("modalImage").src = imagePaths[currentIndex];
+    }
+
+agePaths.length) % imagePaths.length;
         document.getElementById("modalImage").src = imagePaths[currentIndex];
     }
 
