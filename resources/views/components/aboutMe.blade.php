@@ -1,4 +1,4 @@
-<section class="flex justify-center flex-wrap-reverse    items-center my-[100px]">
+<section class="flex justify-center flex-wrap-reverse    items-center my-[100px]" id="about">
 
     <div class="about-image flex justify-center items-center mt-5 aspect-w-1 aspect-h-1">
         <img src="{{ asset('assets/images/image2.jpg') }}" alt="Naad Ali" class=": w-full h-full object-cover h-auto rounded-full">

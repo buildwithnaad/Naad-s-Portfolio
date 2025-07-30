@@ -1,4 +1,4 @@
-<section class=" flex justify-center items-center">
+<section class=" flex justify-center items-center mt-5" id="home">
     <div class="flex hero-section sm:flex-row justify-between items-center h-full flex-wrap">
 
         <div class="hero-content p-2 h-full">

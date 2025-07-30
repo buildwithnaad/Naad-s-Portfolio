@@ -51,16 +51,41 @@
 
 <!-- Modal -->
 <div id="imageModal"
-    class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center flex-col">
-    <button onclick="closeModal()" class="fixed top-4 right-4 text-white text-3xl z-50">&times;</button>
+    class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center flex-col px-4 transition-opacity duration-500 ease-in-out">
+    
+    <!-- Close Button -->
+    <button onclick="closeModal()"
+        class="absolute top-6 right-6 text-white hover:text-red-500 text-4xl transition-transform transform hover:scale-110 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.3 5.71a1 1 0 0 0-1.42 0L12 10.59 7.12 5.7A1 1 0 0 0 5.7 7.12L10.59 12l-4.88 4.88a1 1 0 1 0 1.41 1.42L12 13.41l4.88 4.89a1 1 0 0 0 1.42-1.42L13.41 12l4.89-4.88a1 1 0 0 0 0-1.41z"/>
+        </svg>
+    </button>
+
+    <!-- Previous Button -->
     <button onclick="prevImage()"
-        class="fixed left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-50 bg-black/50 p-2 rounded-full hover:bg-black">&larr;</button>
+        class="absolute left-6 top-1/2 transform -translate-y-1/2 text-white bg-[#FF4141] hover:bg-red-500 p-3 rounded-full transition-all duration-300 shadow-lg z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+    </button>
+
+    <!-- Next Button -->
     <button onclick="nextImage()"
-        class="fixed right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl z-50 bg-black/50 p-2 rounded-full hover:bg-black">&rarr;</button>
-    <div class="w-[90%] max-w-5xl overflow-y-auto max-h-screen mt-[60px] mb-[30px]">
-        <img id="modalImage" src="" alt="Preview" class="w-full h-auto rounded-lg shadow-lg mx-auto">
+        class="absolute right-6 top-1/2 transform -translate-y-1/2 text-white bg-[#FF4141] hover:bg-red-500 p-3 rounded-full transition-all duration-300 shadow-lg z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+        </svg>
+    </button>
+
+    <!-- Image Container -->
+    <div class="w-full max-w-6xl max-h-[85vh] mt-20 mb-10 overflow-hidden rounded-2xl border-2 border-white/20 shadow-2xl transition-transform duration-500 transform hover:scale-[1.02]">
+        <img id="modalImage"
+            src=""
+            alt="Preview"
+            class="w-full h-auto object-contain rounded-2xl" />
     </div>
 </div>
+
 
 <script>
     const imagePaths = [

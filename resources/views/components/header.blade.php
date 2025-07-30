@@ -1,13 +1,13 @@
-<header>
-    <navbar class="header-items-desktop container px-3 mx-auto flex flex-row justify-between items-center">
+<header id="mainNavbar" class="flex justify-center items-center w-full">
+    <nav  class="header-items-desktop container px-3 mx-auto flex flex-row justify-between items-center">
         <a href="" class="header-logo m-0 p-0"><img class="w-[100px]" src="{{ asset('assets/images/logo.png') }}"
                 alt="Logo"></a>
 
 
         <ul class="nav-items mx-auto flex flex-row justify-between items-center gap-5 ">
             <li>
-                <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                <a href="#home"
+                    class="nav-link font-semibold relative inline-block font-medium py-2 px-2   
                             after:content-[''] after:absolute after:bottom-0 after:left-0 
                             after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                             after:origin-left after:transition-transform after:duration-300 
@@ -16,8 +16,8 @@
                 </a>
             </li>
             <li>
-                <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                <a href="#about"
+                    class="nav-link font-semibold relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -26,8 +26,8 @@
                 </a>
             </li>
             <li>
-                <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                <a href="#services"
+                    class="nav-link font-semibold relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -36,8 +36,8 @@
                 </a>
             </li>
             <li>
-                <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                <a href="#experties"
+                    class="nav-link font-semibold relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -46,8 +46,8 @@
                 </a>
             </li>
             <li>
-                <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                <a href="#mission"
+                    class="nav-link font-semibold relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -56,8 +56,8 @@
                 </a>
             </li>
             <li>
-                <a href="#"
-                    class="nav-link relative inline-block font-medium py-2 px-2 text-black 
+                <a href="#contact"
+                    class="nav-link font-semibold relative inline-block font-medium py-2 px-2   
                         after:content-[''] after:absolute after:bottom-0 after:left-0 
                         after:w-full after:h-[2px] after:bg-[#FF4141] after:scale-x-0 
                         after:origin-left after:transition-transform after:duration-300 
@@ -89,10 +89,10 @@
             Appointment
         </button>
 
-    </navbar>
+    </nav>
 
     <!-- Mobile View Menu Button + Menu -->
-    <navbar class="mobile-view-header px-3 mx-auto flex justify-between items-center md:hidden relative z-50">
+    <navbar class="w-full mobile-view-header px-3 mx-auto flex justify-between items-center md:hidden relative z-50">
         <a href="" class="header-logo m-0 p-0">
             <img class="w-[100px]" src="{{ asset('assets/images/logo.png') }}" alt="Logo">
         </a>
@@ -129,12 +129,12 @@
         <div id="mobileMenu"
             class="absolute  top-0 left-0 w-full  p-6 rounded-b-xl shadow-xl transform scale-y-0 opacity-0 origin-top transition-all duration-300 ease-in-out z-1">
             <ul class="flex flex-col justify-center items-center gap-5">
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Home</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">About</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Services</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Experties</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Mission</a></li>
-                <li><a href="#" class="nav-link text-black hover:text-[#FF4141] transition">Contact</a></li>
+                <li><a href="#home" class="nav-link font-semibold   hover:text-[#FF4141] transition">Home</a></li>
+                <li><a href="#about" class="nav-link font-semibold   hover:text-[#FF4141] transition">About</a></li>
+                <li><a href="#services" class="nav-link font-semibold   hover:text-[#FF4141] transition">Services</a></li>
+                <li><a href="#experties" class="nav-link font-semibold   hover:text-[#FF4141] transition">Experties</a></li>
+                <li><a href="#mission" class="nav-link font-semibold   hover:text-[#FF4141] transition">Mission</a></li>
+                <li><a href="#contact" class="nav-link font-semibold   hover:text-[#FF4141] transition">Contact</a></li>
             </ul>
             <div class="mt-6 flex justify-center">
                 \
@@ -186,3 +186,41 @@
         });
     });
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // Checkbox set to ON on load
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const bgImage = document.getElementById("bg-image");
+
+  // Set checkbox to checked and trigger change
+  themeToggle.checked = true;
+  themeToggle.dispatchEvent(new Event("change"));
+
+  // Change event listener
+  themeToggle.addEventListener("change", function () {
+    document.body.classList.toggle("light");
+    themeIcon.classList.toggle("fa-sun");
+    themeIcon.classList.toggle("fa-moon");
+
+    if (bgImage) {
+      bgImage.style.display = bgImage.style.display === "none" ? "block" : "none";
+    }
+
+    console.log("Theme toggled!");
+  });
+});
+
+    window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('mainNavbar');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > window.innerHeight / 2) {
+            navbar.classList.add('fixed', 'top-0',  'z-50', 'shadow-md', 'backdrop-blur-sm' , 'mx-auto');
+        } else {
+            navbar.classList.remove('fixed', 'top-0', 'z-50', 'shadow-md',  'backdrop-blur-sm', 'mx-auto');
+        }
+    });
+</script>
+

@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-        <x-header />
             <x-hero-section/>
             <x-aboutMe/>
             <x-services/>

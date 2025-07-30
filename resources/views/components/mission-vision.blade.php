@@ -1,4 +1,4 @@
-<section class="flex justify-center flex-col items-center my-[100px]">
+<section class="flex justify-center flex-col items-center my-[100px]" id="mission">
 
 
     <h2 class="sub-heading font-bold text-center text-[#FF4141]">My Mission and Vision</h2>

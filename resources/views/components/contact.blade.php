@@ -1,4 +1,4 @@
-<section>
+<section id="contact">
     <!-- Left: Form -->
     <div class='mt-3'>
         <h2 class="sub-heading font-bold text-[#FF4141] text-center mb-8">Contact Me</h2>
